@@ -36,3 +36,5 @@ function showPreviousItem() {
 nextItem.addEventListener('click', showNextItem);
 previousItem.addEventListener('click', showPreviousItem);
 
+// -------
+
