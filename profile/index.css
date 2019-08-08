@@ -1,3 +1,4 @@
+/** general */
 
 * {
   box-sizing: border-box;
@@ -75,6 +76,9 @@ section {
     display: inline;
   }
 }
+
+/** fonts */
+
 h1, h2, h3, h4, p {
   font-family: "Poppins", sans-serif;
   color: #362B27;
@@ -132,9 +136,7 @@ p {
   text-justify: inter-word!important;
 }
 
-/* ==================================================
-   Section 1
-================================================== */
+/** section 1 */
 
 .section-1 {
   background: #E66831;
@@ -288,7 +290,7 @@ a:before, a > span:before, a:after, a > span:after {
   }
 
   .heading-wrapper {
-    top: 27%;
+    top: 34%;
     left: 9%;
     transform: translate(0%, 0%);
   }
@@ -296,10 +298,14 @@ a:before, a > span:before, a:after, a > span:after {
   .heading-wrapper h2 {
     font-size: 23.5px;
     letter-spacing: 3.5px;
+    animation: fadeIn 0.7s ease-in 1s both;
   }
 
   .heading-wrapper img {
     width: 356px;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    transform-origin: bottom;
   }
 
   .sub-wrapper {
@@ -335,12 +341,13 @@ a:before, a > span:before, a:after, a > span:after {
   }
 
   .section-1 > img {
-    left: 52%;
-    bottom: -25%;
+    left: 57%;
+    bottom: -16%;
     width: 480px;
-    -webkit-transform: rotate(8deg);
-    -ms-transform: rotate(8deg);
-    transform: rotate(8deg);
+    transform-origin: left -20px;
+    -webkit-transform: rotate3d(0, 0, 1, 8deg);
+    -ms-transform: rotate3d(0, 0, 1, 8deg);
+    transform: rotate3d(0, 0, 1, 8deg);
   }
 
   .heading-wrapper, .sub-wrapper {
@@ -361,6 +368,12 @@ a:before, a > span:before, a:after, a > span:after {
     width: 451px;
     text-align-last: justify;
   }
+
+  .swing {
+    animation: swing ease-in-out 1s 6 alternate;
+    transform-origin: center -20px;
+    float:left;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -368,8 +381,13 @@ a:before, a > span:before, a:after, a > span:after {
     left: 15%;
   }
 
+   .heading-wrapper {
+    top: 27%;
+  }
+
+   }
    .heading-wrapper img {
-    width: 460px;
+    width: 490px;
   }
 
    .heading-wrapper h2 {
@@ -392,9 +410,8 @@ a:before, a > span:before, a:after, a > span:after {
     right: 8%;
   }
 }
-/* ==================================================
-   Section 2
-================================================== */
+
+/** section 2 */
 
 .section-2 {
   background: #FBFAFA;
@@ -572,9 +589,40 @@ a:before, a > span:before, a:after, a > span:after {
     left: 29%;
   }
 }
-/* ==================================================
-   Section 3
-================================================== */
+
+.bounce-down {
+  animation-name: bounceDown;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+    }
+@keyframes bounceDown {
+  0%   { transform: scale(1,1) translateY(0)  translateY(-500px);; }
+  10%  { transform: scale(1.1,.9) translateY(0); }
+  30%  { transform: scale(.98,1.05) translateY(-80px); }
+  45%  { transform: scale(1.02,.95) translateY(0); }
+  57%  { transform: scale(0.98,1.02) translateY(-10px); }
+  64%  { transform: scale(0.99,1.02) translateY(0); }
+  100% { transform: scale(1,1) translateY(0); }
+}
+
+@keyframes swing {
+    0% { transform: rotate3d(0, 0, 1, 8deg); }
+    100% { transform: rotate3d(0, 0, 1, 10deg); }
+}
+
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 8deg);
+    transform: rotate3d(0, 0, 1, 8deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 10deg);
+    transform: rotate3d(0, 0, 1, 10deg);
+  }
+}
+
+/** section 3 */
+
 .section-3 {
   background: #EAE3D8;
   position: relative;
@@ -672,9 +720,7 @@ a:before, a > span:before, a:after, a > span:after {
   }
 }
 
-/* ==================================================
-   Section 4
-================================================== */
+/** section 4 */
 
 
 .section-4 {
@@ -727,7 +773,7 @@ a:before, a > span:before, a:after, a > span:after {
   width: 100%;
   height: auto;
   opacity: 0;
-  animation: fadeIn 0.8s 0.4s ease forwards;
+  animation: fadeIn 0.8s 0.2s ease forwards;
 }
 
 .slider__content {
@@ -1064,9 +1110,8 @@ button:hover {
   }
 }
 
-/* ==================================================
-   Section 5
-================================================== */
+/** section 5 */
+
 .section-5 {
   position: relative;
   background: #EAE3D8;

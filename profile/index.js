@@ -1,4 +1,16 @@
+// animate on scroll
+AOS.init();
 
+AOS.init({
+  disable: 'mobile',
+  duration: 800,
+  mirror: false,
+  easing: 'ease-in-out'
+  // once: true,
+  // easing: 'ease-out-back'
+});
+
+// slider
 const items = document.querySelectorAll('.slider');
 const itemCount = items.length;
 const nextItem = document.querySelector('.next');
@@ -6,8 +18,6 @@ const previousItem = document.querySelector('.previous');
 let count = 0;
 
 function showNextItem() {
-  // items[count].classList.remove('active');
-  // items[count].className.replace(/\bactive\b/g, " ").trim();
   items[count].className = items[count].className.replace(/\bactive\b/g, " ").trim();
 
   if(count < itemCount - 1) {
@@ -21,8 +31,8 @@ function showNextItem() {
 }
 
 function showPreviousItem() {
-  // items[count].classList.remove('active');
   items[count].className = items[count].className.replace(/\bactive\b/g, " ").trim();
+
   if(count > 0) {
     count--;
   } else {
@@ -36,5 +46,16 @@ function showPreviousItem() {
 nextItem.addEventListener('click', showNextItem);
 previousItem.addEventListener('click', showPreviousItem);
 
-// -------
+// swing animation
+$(document).ready(function() {
+
+    $('.section-1 > img').hover(function() {
+      $(this).addClass('swing');
+    });
+
+    $('.section-1 > img').bind('webkitAnimationEnd mozAnimationEnd animationEnd', function() {
+      $(this).removeClass('swing');
+    });
+
+});
 
