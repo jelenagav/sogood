@@ -46,16 +46,27 @@ function showPreviousItem() {
 nextItem.addEventListener('click', showNextItem);
 previousItem.addEventListener('click', showPreviousItem);
 
-// swing animation
+//swing animation
 $(document).ready(function() {
 
-    $('.section-1 > img').hover(function() {
-      $(this).addClass('swing');
+    $('.flex-container__content').hover(function() {
+      $('.flex-container__img > img').addClass('swing');
     });
 
-    $('.section-1 > img').bind('webkitAnimationEnd mozAnimationEnd animationEnd', function() {
+    $('.flex-container__img > img').bind('webkitAnimationEnd mozAnimationEnd animationEnd', function() {
       $(this).removeClass('swing');
     });
 
 });
+const scene = document.getElementById('scene')
 
+const parallaxInstance = new Parallax(scene, {
+  // hoverOnly:true,
+  relativeInput:true,
+  originX:-1,
+  originY:0.5,
+  limitY: 50,
+  limitX: 50,
+  frictionX: .1,
+  frictionY: .1
+});
