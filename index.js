@@ -7,7 +7,6 @@ AOS.init({
   mirror: false,
   easing: 'ease-in-out'
   // once: true,
-  // easing: 'ease-out-back'
 });
 
 // slider
@@ -46,7 +45,7 @@ function showPreviousItem() {
 nextItem.addEventListener('click', showNextItem);
 previousItem.addEventListener('click', showPreviousItem);
 
-//swing animation
+//swing animation -- fix cross browser issue
 $(document).ready(function() {
 
     $('.flex-container__content').hover(function() {
@@ -58,10 +57,11 @@ $(document).ready(function() {
     });
 
 });
+
+//parallax cursor follow
 const scene = document.getElementById('scene')
 
 const parallaxInstance = new Parallax(scene, {
-  // hoverOnly:true,
   relativeInput:true,
   originX:-1,
   originY:0.5,
