@@ -68,7 +68,7 @@ AOS.init();
 
 AOS.init({
   disable: 'mobile',
-  duration: 800,
+  // duration: 800,
   mirror: false,
   easing: 'ease-in-out'
   // once: true,

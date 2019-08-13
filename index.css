@@ -1,14 +1,3 @@
-/*initial state animation
-*/[data-aos="fadeDown"] {
-  transform: translateY(-10px);
-  transition-property: transform;
-}
-
-/*final stage animation
-*/[data-aos="fadeDown"].aos-animate {
-  transform: translateY(0px);
-}
-
 /** general */
 .changeColor {
   background: #FBFAFA!important;
@@ -39,7 +28,7 @@ section {
 button, .button--form{
   font-size: 13px!important;
   letter-spacing: 1.1px;
-  font-weight: 400;
+  font-weight: 500;
   border: solid 1.5px #362B27;
   background: none;
   display: block;
@@ -318,16 +307,20 @@ h3 {
 }
 
 @media (min-width: 992px) {
+  h2 {
+    font-size: 29px;
+  }
+
   h3 {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 p {
   font-weight: 300;
   font-size: 15px;
   line-height: 1.7em;
-  text-align:justify!important;
-  text-justify: inter-word!important;
+/*  text-align:justify!important;
+  text-justify: inter-word!important;*/
 }
 
 /** section 1 */
@@ -421,8 +414,8 @@ a:before, a > span:before, a:after, a > span:after {
 .sub-wrapper p {
   font-weight: 400;
   color: #FBFAFA!important;
-  text-transform: uppercase;
-  text-align: left!important;
+/*  text-transform: uppercase;
+*/  text-align: left!important;
 }
 
 .img-holder {
@@ -462,14 +455,9 @@ a:before, a > span:before, a:after, a > span:after {
   }
 
   .sub-wrapper p {
-    font-size: 12px;
-    letter-spacing: 2px;
-  }
-
-  .bounce-down {
-    animation-name: bounceDown;
-    animation-duration: 2s;
-    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+    font-size: 14px;
+    letter-spacing: 0.9px;
+    text-align: center!important;
   }
 }
 
@@ -484,7 +472,7 @@ a:before, a > span:before, a:after, a > span:after {
   }
 */
   .heading-wrapper {
-    top: 37%;
+    top: 28%;
     left: 13%;
     transform: translate(0%, 0%);
   }
@@ -502,15 +490,15 @@ a:before, a > span:before, a:after, a > span:after {
   }
 
   .sub-wrapper {
-    width: 400px;
+    width: 340px;
     left: 9%;
     transform: translateX(0%);
     display: none;
   }
 
   .sub-wrapper p {
-    font-size: 12px!important;
-    letter-spacing: 2.5px;
+    font-size: 14px!important;
+    text-align: left!important;
   }
 
   .img-holder {
@@ -585,13 +573,13 @@ a:before, a > span:before, a:after, a > span:after {
   }
 
   .sub-wrapper {
-    width: 451px;
-    bottom: 10%;
+    width: 417px;
+    bottom: 17%;
 /*    text-align-last: justify;
 */  }
 
   .sub-wrapper p {
-    font-size: 14px!important;
+    font-size: 15px!important;
   }
 }
 
@@ -644,7 +632,7 @@ a:before, a > span:before, a:after, a > span:after {
   position: relative;
   z-index: 1;
   max-width: 85vw;
-  margin: 0 auto 7% auto;
+  margin: 0 auto 4% auto;
 }
 
 .section-2 h3 {
@@ -895,6 +883,11 @@ a:before, a > span:before, a:after, a > span:after {
   align-items: center;
 }
 
+.section-3 p {
+  text-align: justify;
+}
+
+
 @media (min-width: 576px) {
   .section-3 img {
     max-width: 15%;
@@ -929,6 +922,7 @@ a:before, a > span:before, a:after, a > span:after {
 
   .section-3 p {
     font-size: 14px;
+    padding-top: 15px;
   }
 }
 
@@ -1242,7 +1236,7 @@ button.button--cart:hover {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    padding: 20px 19px;
+    padding: 18px 15px;
   }
 
 
@@ -1473,7 +1467,36 @@ textarea {
   color: #FBFAFA;
 }
 
-/*keyframes*/
+/* Keyframes & Animations*/
+
+/*initial state animation
+*/[data-aos="fadeDown"] {
+  transform: translateY(20px);
+  transition-property: transform;
+}
+
+/*final stage animation
+*/[data-aos="fadeDown"].aos-animate {
+  transform: translateY(0px);
+}
+
+[data-aos="fadeDownXS"] {
+  transform: translateY(10px);
+  transition-property: transform;
+}
+
+[data-aos="fadeDownXS"].aos-animate {
+  transform: translateY(0px);
+}
+
+@media (min-width: 576px) {
+.bounce-down {
+    animation-name: bounceDown;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+  }
+}
+
 @keyframes bounceDown {
   0% {
     -webkit-transform: translateY(-500px) scale(0.9,1.1);
