@@ -1,3 +1,18 @@
+//nav
+
+
+$(document).ready(function(){
+  $('#menu-wrapper__icon').click(function(){
+    $(this).toggleClass('open');
+    $(".overlay, .overlay a").toggleClass("open");
+  });
+
+  $('.overlay a').on("click", function() {
+    $('#menu-wrapper__icon').click();
+  });
+
+});
+
 // animate on scroll
 AOS.init();
 
@@ -70,3 +85,5 @@ const parallaxInstance = new Parallax(scene, {
   frictionX: .1,
   frictionY: .1
 });
+
+
