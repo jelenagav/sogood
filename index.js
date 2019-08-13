@@ -1,6 +1,56 @@
+//Parallax
+// $(window).scroll(function() {
+//   var scroll = $(window).scrollTop();
+//   $(".section-1, nav, .img-holder > img").css("transform","translateY(" +  (scroll/4)  + "px)");
+// });
+
+// Waypoints
+$( document ).ready(function() {
+
+  $('.first').waypoint(function(direction) {
+
+    if (direction ==='down') {
+      $(".first").addClass('animated fadeInLeft');
+    }
+    else {
+      $(".first").fadeTo(400, 0.0);
+      $(".first").removeClass('animated fadeInLeft');
+
+    }
+  },{
+    offset: '75%'
+  });
+
+  $('.second').waypoint(function(direction) {
+
+    if (direction ==='down') {
+      $(".second").addClass('animated fadeInRight');
+    }
+    else {
+      $(".second").fadeTo(400, 0.0);
+      $(".second").removeClass('animated fadeInRight');
+
+    }
+  },{
+    offset: '75%'
+  });
+
+  $('.third').waypoint(function(direction) {
+
+    if (direction ==='down') {
+      $(".third").addClass('animated fadeInUp');
+    }
+    else {
+      $(".third").fadeTo(400, 0.0);
+      $(".third").removeClass('animated fadeInUp')
+
+    }
+  },{
+    offset: '75%'
+  });
+
+});
 //nav
-
-
 $(document).ready(function(){
   $('#menu-wrapper__icon').click(function(){
     $(this).toggleClass('open');
@@ -60,10 +110,10 @@ function showPreviousItem() {
 nextItem.addEventListener('click', showNextItem);
 previousItem.addEventListener('click', showPreviousItem);
 
-//swing animation -- fix cross browser issue
+//trigger swing animation -- fix cross browser
 $(document).ready(function() {
 
-    $('.flex-container__content').hover(function() {
+    $('.flex-container__content, .flex-container__img > img').hover(function() {
       $('.flex-container__img > img').addClass('swing');
     });
 
@@ -73,6 +123,20 @@ $(document).ready(function() {
 
 });
 
+// change color s1
+// $(document).ready(function(){
+//     var scroll_pos = 0;
+//     $(document).scroll(function() {
+//         scroll_pos = $(this).scrollTop();
+//         if(scroll_pos > 250) {
+//             $("#section_1").addClass("changeColor");
+//         }
+//         else {
+//             $("#section_1").removeClass("changeColor");
+//         }
+//     });
+// });
+
 //parallax cursor follow
 const scene = document.getElementById('scene')
 
@@ -80,8 +144,8 @@ const parallaxInstance = new Parallax(scene, {
   relativeInput:true,
   originX:-1,
   originY:0.5,
-  limitY: 50,
-  limitX: 50,
+  limitY: 30,
+  limitX: 30,
   frictionX: .1,
   frictionY: .1
 });
