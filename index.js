@@ -52,13 +52,13 @@ $( document ).ready(function() {
 });
 //nav
 $(document).ready(function(){
-  $('#menu-wrapper__icon').click(function(){
+  $('.menu__icon').click(function(){
     $(this).toggleClass('open');
-    $(".overlay, .overlay a").toggleClass("open");
+    $(".menu__overlay, .menu__overlay a").toggleClass("open");
   });
 
-  $('.overlay a').on("click", function() {
-    $('#menu-wrapper__icon').click();
+  $('.menu__overlay a').on("click", function() {
+    $('.menu__icon').click();
   });
 
 });
@@ -82,7 +82,7 @@ const previousItem = document.querySelector('.previous');
 let count = 0;
 
 function showNextItem() {
-  items[count].className = items[count].className.replace(/\bactive\b/g, " ").trim();
+  items[count].className = items[count].className.replace(/\bslider--active\b/g, " ").trim();
 
   if(count < itemCount - 1) {
     count++;
@@ -90,12 +90,12 @@ function showNextItem() {
     count = 0;
   }
 
-  items[count].className += " active";
+  items[count].className += " slider--active";
   console.log(count);
 }
 
 function showPreviousItem() {
-  items[count].className = items[count].className.replace(/\bactive\b/g, " ").trim();
+  items[count].className = items[count].className.replace(/\bslider--active\b/g, " ").trim();
 
   if(count > 0) {
     count--;
@@ -103,7 +103,7 @@ function showPreviousItem() {
     count = itemCount - 1;
   }
 
-  items[count].className += " active";
+  items[count].className += " slider--active";
   console.log(count);
 }
 
@@ -123,19 +123,6 @@ $(document).ready(function() {
 
 });
 
-// change color s1
-// $(document).ready(function(){
-//     var scroll_pos = 0;
-//     $(document).scroll(function() {
-//         scroll_pos = $(this).scrollTop();
-//         if(scroll_pos > 250) {
-//             $("#section_1").addClass("changeColor");
-//         }
-//         else {
-//             $("#section_1").removeClass("changeColor");
-//         }
-//     });
-// });
 
 //parallax cursor follow
 const scene = document.getElementById('scene')
