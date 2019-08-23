@@ -438,6 +438,7 @@ p {
     width: 365px;
   }
 }
+
 @media (min-width:850px) {
   .section-1 {
     height: 70vh;
@@ -453,7 +454,6 @@ p {
   .heading-wrapper h2 {
     font-size: 26px;
   }
-}
 
   .img-holder > img {
     width: 400px;
@@ -613,6 +613,14 @@ p {
 @media (min-width: 576px) {
   .section-2 .flex-container {
     max-width: 75%;
+  }
+
+  .section-2 h2 {
+    animation: fadeIn 0.7s ease-in 2.6s both;
+  }
+
+  .section-2 h3 {
+    animation: fadeIn 0.7s ease-in 2.6s both;
   }
 
   .section-2 hr {
@@ -930,7 +938,7 @@ button.selectbox__button {
 
 button.selectbox__button:hover {
   opacity: 0.1;
-  color: #362B27;
+  color: #FBFAFA;
   cursor: not-allowed;
 }
 
