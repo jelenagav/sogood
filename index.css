@@ -88,6 +88,14 @@ button:hover, .button--form:hover {
   }
 }
 
+@media (min-width: 1400px) {
+  .section-2 {
+    padding: 50px;
+  }
+}
+
+
+
 /*nav & footer*/
 
 nav {
@@ -345,8 +353,8 @@ p {
 }
 
 .sub-wrapper {
-  display: none;
-}
+/*  display: none;
+*/}
 
 .sub-wrapper p {
   font-weight: 400;
@@ -615,14 +623,6 @@ p {
     max-width: 75%;
   }
 
-  .section-2 h2 {
-    animation: fadeIn 0.7s ease-in 2.6s both;
-  }
-
-  .section-2 h3 {
-    animation: fadeIn 0.7s ease-in 2.6s both;
-  }
-
   .section-2 hr {
     max-width: 10%;
     margin: -12px 0 0 0;
@@ -655,6 +655,14 @@ p {
      z-index: 2;
      max-width: 73%;
      margin: 0;
+  }
+
+  .section-2 h2 {
+    animation: fadeIn 0.3s ease-in 2.6s both;
+  }
+
+  .section-2 h3 {
+    animation: fadeIn 0.3s ease-in 2.6s both;
   }
 
   .section-2 .flex-container__img img {
@@ -1212,13 +1220,33 @@ button.selectbox__button:hover {
   }
 
   .slider__content {
-    padding: 0 5% 0 5%;
+    padding: 0 2% 0 5%;
   }
 
   .selectbox {
     margin: 7% 0;
   }
 }
+
+@media (min-width: 1400px){
+  .slider {
+    width: 70%;
+  }
+
+  .slider__arrow-holder {
+    width: 70%;
+  }
+
+  .slider__image img {
+/*    max-width: 110%;
+    max-height: 110%;*/
+  }
+
+  .slider__content {
+    padding: 0 5% 0 5%;
+  }
+}
+
 
 /** section 5 */
 
