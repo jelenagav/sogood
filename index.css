@@ -1440,7 +1440,8 @@ textarea {
     -webkit-animation: swing ease-in-out 1s 6 alternate;
     animation: swing ease-in-out 1s 6 alternate;
     animation-delay: 0.2s;
-    transform-origin: center -30px;
+/*    transform-origin: left 0px;
+*/    transform-origin: center -30px;
     float:left;
   }
 }
@@ -1565,6 +1566,18 @@ textarea {
 @-webkit-keyframes swing {
   0% {
     -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+}
+
+/*@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
     transform: rotate3d(0, 0, 1, -5deg);
   }
 
@@ -1572,7 +1585,7 @@ textarea {
     -webkit-transform: rotate3d(0, 0, 1, 0deg);
     transform: rotate3d(0, 0, 1, -5deg);
   }
-}
+}*/
 
 @keyframes HideList {
   from {

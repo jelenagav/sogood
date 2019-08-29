@@ -4,52 +4,7 @@
 //   $(".section-1, nav, .img-holder > img").css("transform","translateY(" +  (scroll/4)  + "px)");
 // });
 
-// Waypoints
-$( document ).ready(function() {
 
-  $('.first').waypoint(function(direction) {
-
-    if (direction ==='down') {
-      $(".first").addClass('animated fadeInLeft');
-    }
-    else {
-      $(".first").fadeTo(400, 0.0);
-      $(".first").removeClass('animated fadeInLeft');
-
-    }
-  },{
-    offset: '75%'
-  });
-
-  $('.second').waypoint(function(direction) {
-
-    if (direction ==='down') {
-      $(".second").addClass('animated fadeInRight');
-    }
-    else {
-      $(".second").fadeTo(400, 0.0);
-      $(".second").removeClass('animated fadeInRight');
-
-    }
-  },{
-    offset: '75%'
-  });
-
-  $('.third').waypoint(function(direction) {
-
-    if (direction ==='down') {
-      $(".third").addClass('animated fadeInUp');
-    }
-    else {
-      $(".third").fadeTo(400, 0.0);
-      $(".third").removeClass('animated fadeInUp')
-
-    }
-  },{
-    offset: '75%'
-  });
-
-});
 //nav
 $(document).ready(function(){
   $('.menu__icon').click(function(){
@@ -123,6 +78,17 @@ $(document).ready(function() {
 
 });
 
+// $(document).ready(function() {
+
+//     $('.img-holder ').hover(function() {
+//       $('.img-holder ').addClass('swing');
+//     });
+
+//     $('.img-holder ').bind('webkitAnimationEnd mozAnimationEnd animationEnd', function() {
+//       $(this).removeClass('swing');
+//     });
+
+// });
 
 //parallax cursor follow
 const scene = document.getElementById('scene')
@@ -131,10 +97,10 @@ const parallaxInstance = new Parallax(scene, {
   relativeInput:true,
   originX:-1,
   originY:0.5,
-  limitY: 30,
+  limitY: 20,
   limitX: 30,
   frictionX: .1,
-  frictionY: .1
+  frictionY: .05
 });
 
 
