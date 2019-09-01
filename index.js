@@ -97,8 +97,8 @@ const parallaxInstance = new Parallax(scene, {
   relativeInput:true,
   originX:-1,
   originY:0.5,
-  limitY: 20,
-  limitX: 30,
+  limitY: 10,
+  limitX: 25,
   frictionX: .1,
   frictionY: .05
 });

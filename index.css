@@ -1,4 +1,6 @@
 /** general */
+
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -125,8 +127,8 @@ nav {
   -webkit-transition: .5s ease-in-out;
   cursor: pointer;
   margin-top: 10px;
-  animation: 1s fadeInNav ease;
-  -webkit-animation: 1s fadeInNav ease;;
+  animation: fadeIn 1s ease 2.3s both;
+  -webkit-animation: fadeIn  1s ease 2.3s both ;
 }
 
 .menu__icon span {
@@ -266,7 +268,7 @@ nav {
 
 h1, h2, h3, h4, p {
   font-family: "Poppins", sans-serif;
-  color: #362B27;
+  color: #40332e;
 }
 
 h2 {
@@ -379,7 +381,9 @@ p {
     font-size: 27px;
     letter-spacing: 5.5px;
     word-spacing: 2px;
-    animation: fadeIn 0.7s ease-in 2.4s both;
+    animation: fadeIn 0.5s linear 2s both;
+    -webkit-animation: fadeIn 0.5s linear 2s both;
+
   }
 
   .sub-wrapper {
@@ -389,6 +393,7 @@ p {
     left: 50%;
     transform: translateX(-50%);
     animation: fadeIn 0.7s ease-in 2.4s both;
+    -webkit-animation: fadeIn 0.7s ease-in 2.4s both;
   }
 
   .sub-wrapper p {
@@ -439,7 +444,7 @@ p {
     left: 55%;
     bottom: -21%;
     z-index: 2;
-    animation: fadeIn 0.7s ease-in 2.4s both;
+    animation: fadeInUp 0.7s ease-in 2.8s both;
   }
 
   .img-holder > img {
@@ -471,8 +476,9 @@ p {
 @media (min-width:992px) {
   .section-1 {
     height: 80vh;
+    animation: shrinkUp 0.5s linear 2.6s both;
+    -webkit-animation: shrinkUp 0.5s linear 2.6s both;
   }
-
 
   .img-holder {
     left: 51%;
@@ -1605,17 +1611,20 @@ textarea {
   }
 }
 
-@keyframes fadeInNav {
+@keyframes fadeInUp {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
-  50% {
-    opacity: 0;
-    top: -25px;
+  30% {
+    opacity: 0.95;
+
   }
   100% {
     opacity: 1;
-    top: 0;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
@@ -1629,6 +1638,16 @@ textarea {
   }
   100%{
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes shrinkUp {
+  0% {
+   height: 90vh;
+  }
+
+  100% {
+    height: 80vh;
   }
 }
 
