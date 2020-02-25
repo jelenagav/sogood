@@ -273,7 +273,7 @@ h1, h2, h3, h4, p {
 
 h2 {
   font-size: 1.2em;
-  color: #1d1716!important;
+  color: #29211f!important;
   font-weight: 700;
   line-height: 29px;
   text-transform: uppercase;
@@ -563,7 +563,7 @@ p {
   background: #FBFAFA;
   position: relative;
   z-index: 1;
-  margin-bottom: 4%;
+  margin-bottom: 11%;
 }
 
 .section-2 .flex-container {
@@ -656,7 +656,7 @@ p {
 
 @media (min-width: 768px) {
   .section-2 .flex-container {
-    max-width: 90%;
+    max-width: 85%;
   }
 
   .section-2 .flex-container__img {
@@ -705,7 +705,6 @@ p {
   }
 
   .section-2 .flex-container {
-    max-width: 85%;
     margin: 25px auto 0 auto;
   }
 
@@ -747,7 +746,7 @@ p {
 
 @media (min-width: 1200px) {
   .section-2 .flex-container {
-    max-width: 90%;
+    max-width: 85%;
     margin: 0 auto;
   }
   .section-2 .flex-container__content {
@@ -756,7 +755,7 @@ p {
 
   .section-2 .flex-container__img h4 {
     opacity: 1;
-    top: 38%;
+    top: 34%;
     left: 11%;
   }
 
@@ -768,8 +767,8 @@ p {
 
 @media (min-width: 1400px) {
   .section-2 .flex-container__img h4 {
-    top: 32%;
-    left: 12%;
+    top: 30%;
+    left: 9%;
   }
 
   .section-2 .flex-container img {
@@ -826,7 +825,10 @@ p {
 }
 
 .section-3 .flex-container {
-  padding: 5vw 5.5vw;
+  padding: 5vw 0vw;
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-3 .flex-container__column {
@@ -859,7 +861,7 @@ p {
 
 @media (min-width: 768px) {
   .section-3 .flex-container {
-    padding: 3vw 3.5vw;
+    padding: 3vw 0;
   }
 
   .section-3 .flex-container__column {
@@ -887,7 +889,7 @@ p {
 
 @media (min-width: 992px) {
   .section-3 .flex-container {
-    padding: 3vw 5vw;
+    padding: 4.5vw 0vw;
   }
 
  .section-3 .flex-container__column:nth-child(2) {
