@@ -1305,7 +1305,7 @@ button.selectbox__button:hover {
   .slider {
     padding: 50px;
     margin-top: 3%;
-    width: 80%;
+    width: 83%;
   }
 
   .slider__content {
@@ -1319,7 +1319,7 @@ button.selectbox__button:hover {
 
 @media (min-width: 1400px){
   .slider {
-    width: 70%;
+    width: 75%;
   }
 
   .slider__arrow-holder {
@@ -1332,7 +1332,7 @@ button.selectbox__button:hover {
   }
 
   .slider__content {
-    padding: 0 5% 0 5%;
+    padding: 0 2% 0 5%;
   }
 }
 
