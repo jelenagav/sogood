@@ -785,7 +785,7 @@ p {
 }
 
 .section-3 h3 {
-  font-size: 30px;
+  font-size: 1.8rem;
   color: #362B27!important;
   text-align: left;
 }
@@ -873,10 +873,11 @@ p {
 @media (min-width: 768px) {
   .section-3 .flex-container {
     padding: 3vw 0;
+    max-width: 87%;
   }
 
   .section-3 .flex-container__column:nth-child(2) {
-    padding: 1R% 0;
+    padding: 1% 0;
   }
 
   .section-3 p {
@@ -918,7 +919,7 @@ p {
     display: inline-block;
     vertical-align: middle;
     max-width: 13%;
-    margin-right: 39px;
+    margin-right: 20px;
     margin-left: -39px;
   }
 
@@ -951,6 +952,11 @@ p {
 /*    margin: 0em 3em 0em 3em!important;
 */  }
   .section-3 p {
+  }
+
+  .section-3 img {
+    margin-right: 39px;
+    margin-left: -39px;
   }
 }
 
