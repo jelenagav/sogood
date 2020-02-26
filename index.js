@@ -68,7 +68,7 @@ previousItem.addEventListener('click', showPreviousItem);
 //trigger swing animation -- fix cross browser
 $(document).ready(function() {
 
-    $('.flex-container__content, .flex-container__img > img').hover(function() {
+    $('.flex-container__content, .flex-container__img').hover(function() {
       $('.flex-container__img > img').addClass('swing');
     });
 
