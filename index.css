@@ -107,7 +107,7 @@ nav {
   visibility: hidden;
   width: 100%;
   height: 0px;
-  background-color: #3C332F;
+  background-color: #4c403b;
   top: 0;
 }
 
@@ -258,6 +258,10 @@ nav {
 }
 
 @media (min-width: 576px) {
+  nav {
+    background-color: #3C332F;
+  }
+
   .footer {
    font-size: 14px;
   }
@@ -344,7 +348,7 @@ p {
 /** section 1 */
 
 .section-1 {
-  background: #3C332F;
+  background-color: #4c403b;
   height: 55vh;
   position: relative;
 }
@@ -363,6 +367,8 @@ p {
   text-transform: uppercase;
   margin-top: 2.5%;
   margin-bottom: 2.5%;
+  animation: fadeIn 0.5s linear 2s both;
+  -webkit-animation: fadeIn 0.5s linear 2s both;
 }
 
 .heading-wrapper img {
@@ -386,6 +392,7 @@ p {
 @media (min-width: 576px) {
   .section-1 {
     height: 70vh;
+    background: #3C332F;
   }
 
   .heading-wrapper img, .sub-wrapper {
@@ -396,9 +403,6 @@ p {
     font-size: 27px;
     letter-spacing: 5.5px;
     word-spacing: 2px;
-    animation: fadeIn 0.5s linear 2s both;
-    -webkit-animation: fadeIn 0.5s linear 2s both;
-
   }
 
   .sub-wrapper {
@@ -1515,13 +1519,12 @@ textarea {
   color: #ffffff;
 }
 
-@media (min-width: 576px) {
 .bounce-down {
-    animation-name: bounceDown;
-    animation-duration: 2s;
-    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-  }
+  animation-name: bounceDown;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
 }
+
 @media (min-width: 768px) {
   .button--form {
     padding: 20px 40px!important;
